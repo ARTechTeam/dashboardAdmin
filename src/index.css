@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	@font-face {
+		font-family: "primary";
+		src: url("/FONTS/IRANSansWeb_FaNum.ttf") format("truetype");
+	}
+	@font-face {
+		font-family: "primary-bold";
+		src: url("/public/FONTS/IRANSansWeb_FaNum_Bold.ttf") format("truetype");
+	}
+	@font-face {
+		font-family: "secondary";
+		src: url("/public/FONTS/PeydaFaNum-Medium.ttf") format("truetype");
+	}
+	@font-face {
+		font-family: "secondary-bold";
+		src: url("/public/FONTS/PeydaFaNum-Black.ttf") format("truetype");
+	}
+
+	.custom-scrollbar::-webkit-scrollbar{
+		width: 8px;
+	}
+	.custom-scrollbar::-webkit-scrollbar-thumb{
+		background: rgb(213, 213, 213);
+		border-radius: 55555555px;
+		
+	}
+	.custom-scrollbar::-webkit-scrollbar-thumb:hover{
+		background: rgb(173, 173, 173);
+		border-radius: 55555555px;
+		transition: all 3000ms ease-in-out;
+		
+	}
+	.custom-scrollbar::-webkit-scrollbar-track{
+		background: transparent;
+	}
+}
