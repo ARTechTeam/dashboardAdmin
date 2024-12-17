@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Header from "./Header/Header";
 import NavUl from "./Header/Navbar/NavUl";
+import Body from "./Body/Body";
 
 function App() {
 	const [darkMode, setDarkMode] = useState(false);
@@ -25,7 +26,7 @@ function App() {
 	return (
 		<div className={`font-secondary bg-gray-100 text-sm`}>
 			<div className="bg-white">
-				<div className="max-w-310 mx-auto relative ">
+				<div className="z-20 max-w-310 mx-auto relative ">
 					<Header
 						changeMode={changeMode}
 						showVisibleMenu={showVisibleMenu}
@@ -43,12 +44,7 @@ function App() {
 					</div>
 				</div>
 			</div>
-			<div className="bg-slate-100 dark:bg-Secondary-dark max-md:w-full h-[300vh] mt-20 p-2 md:mr-72">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit.
-				Explicabo voluptas animi quis libero soluta reiciendis repellat
-				distinctio, quidem quos consequatur earum ea ipsum reprehenderit
-				et ducimus excepturi? Voluptatum, magni! Iusto?
-			</div>
+			<Body />
 		</div>
 	);
 }

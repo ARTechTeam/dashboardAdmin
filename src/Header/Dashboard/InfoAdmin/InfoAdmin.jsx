@@ -3,7 +3,7 @@ import { adminInformation } from "../../../data/data";
 export default function InfoAdmin() {
 	return (
 		<div className="flex flex-col gap-3 justify-center items-center py-3 border-b border-light-border dark:border-dark-border">
-			<button className="border-8 rounded-full dark:border-dark-border border-Secondary/15 w-fit h-fit relative">
+			<button className="border-8 rounded-full dark:border-Secondary/30 border-Secondary/15 w-fit h-fit relative">
 				<img
 					src={`${
 						adminInformation.photo == "default"

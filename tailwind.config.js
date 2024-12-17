@@ -24,11 +24,16 @@ export default {
 				"secondary-bold": "secondary-bold",
 			},
 			colors: {
-				Primary: "#180161",
-				"Primary-dark": "#111727",
-				Secondary: "#270082",
+				// 
+				Primary: "#C40C0C",
+				// 
+				"Primary-dark": "#050505",
+				// 
+				Secondary: "#FF6500",
+
+				
 				"Secondary-dark": "#202938",
-				"Secondary-light": "#7A0BC0",
+				"Secondary-light": "#FF8A08",
 				
 
 				"dark-border": "#1f2937",

@@ -18,7 +18,7 @@ export default function Dashboard() {
 			</div>
 
 			<div
-				className={`transition-all duration-700 ease-in-out transform ${
+				className={`transition-all z-50 duration-700 ease-in-out transform ${
 					isVisible
 						? "translate-x-0 opacity-100"
 						: "translate-x-full opacity-0"
