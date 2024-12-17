@@ -41,10 +41,9 @@ export default function UserActivations() {
 						<Legend />
 						<Bar
 							dataKey="uv"
-							w
 							barSize="12"
-							fill="#82ca9d"
-							radius={[0, 50, 0, 50]}
+							fill="#ff6500"
+							radius={[1, 200, 1, 400]}
 						/>
 					</BarChart>
 				</ResponsiveContainer>

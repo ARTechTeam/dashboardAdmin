@@ -17,11 +17,11 @@ export default function SaleOverview() {
 		{ name: "Page E", uv: 410, pv: 2400, amt: 2400 },
 	];
 	return (
-		<div className="w-full max-h-96 min-h-72 bg-white shadow py-7 pr-7">
+		<div className="w-full h-[472px] bg-white shadow py-7 pr-7">
 			<RateBtn>
 			86% More than last year
 			</RateBtn>
-			<ResponsiveContainer width="100%" height={220} >
+			<ResponsiveContainer width="100%" height="100%" >
 				<LineChart data={data}>
 					<XAxis dataKey="name" />
 					<YAxis tickMargin={35} />
