@@ -1,40 +1,61 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-@layer base {
-	@font-face {
-		font-family: "primary";
-		src: url("/FONTS/IRANSansWeb_FaNum.ttf") format("truetype");
-	}
-	@font-face {
-		font-family: "primary-bold";
-		src: url("/public/FONTS/IRANSansWeb_FaNum_Bold.ttf") format("truetype");
-	}
-	@font-face {
-		font-family: "secondary";
-		src: url("/public/FONTS/PeydaFaNum-Medium.ttf") format("truetype");
-	}
-	@font-face {
-		font-family: "secondary-bold";
-		src: url("/public/FONTS/PeydaFaNum-Black.ttf") format("truetype");
-	}
+@font-face {
+	font-family: "primary";
+	src: url("/FONTS/IRANSansWeb_FaNum.ttf") format("truetype");
+}
+@font-face {
+	font-family: "primary-bold";
+	src: url("/public/FONTS/IRANSansWeb_FaNum_Bold.ttf") format("truetype");
+}
+@font-face {
+	font-family: "secondary";
+	src: url("/public/FONTS/PeydaFaNum-Medium.ttf") format("truetype");
+}
+@font-face {
+	font-family: "secondary-bold";
+	src: url("/public/FONTS/PeydaFaNum-Black.ttf") format("truetype");
+}
 
-	.custom-scrollbar::-webkit-scrollbar{
-		width: 8px;
-	}
-	.custom-scrollbar::-webkit-scrollbar-thumb{
-		background: rgb(213, 213, 213);
-		border-radius: 55555555px;
-		
-	}
-	.custom-scrollbar::-webkit-scrollbar-thumb:hover{
-		background: rgb(173, 173, 173);
-		border-radius: 55555555px;
-		transition: all 3000ms ease-in-out;
-		
-	}
-	.custom-scrollbar::-webkit-scrollbar-track{
-		background: transparent;
-	}
+.custom-scrollbar::-webkit-scrollbar {
+	width: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+	background: rgb(213, 213, 213);
+	border-radius: 55555555px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+	background: rgb(173, 173, 173);
+	border-radius: 55555555px;
+	transition: all 3000ms ease-in-out;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+@theme {
+	/* colors */
+	--color-Primary: #c40c0c;
+	--color-Primary-dark: #050505;
+	--color-Secondary: #ff6500;
+	--color-Secondary-dark: #202938;
+	--color-Secondary-light: #ff8a08;
+	--color-dark-border: #1f2937;
+	--color-light-border: #e5e7eb;
+
+	/* fonts */
+	--font-primary: primary, sans-serif;
+	--font-primary-bold: primary-bold, sans-serif;
+	--font-secondary: secondary, sans-serif;
+	--font-secondary-bold: secondary-bold, sans-serif;
+
+	/* container */
+	--container-padding: 1rem;
+	--container-padding-sm: 1.5rem;
+	--container-padding-md: 1rem;
+	--container-padding-lg: 1.5rem;
+	--container-padding-xl: 4rem;
+
+	/* width */
+	--max-width-310: 1400px;
 }
