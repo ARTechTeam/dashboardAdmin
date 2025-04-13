@@ -1,52 +1,44 @@
-import { useEffect, useState } from "react";
-import Header from "./Header/Header";
-import NavUl from "./Header/Navbar/NavUl";
-import Body from "./Body/Body";
+import { useEffect, useState } from 'react';
+import Header from './Header/Header';
+import NavUl from './Header/Navbar/NavUl';
+import Body from './Body/Body';
+import Dashboard from './Header/Dashboard/Dashboard';
+import SearchBar from './Header/SearchBar/SearchBar';
+import Navbar from './Header/Navbar/Navbar';
 
 function App() {
-	const [darkMode, setDarkMode] = useState(false);
-	const [isVisibleMenu, setIsVisibleMenu] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
+  const [isVisibleMenu, setIsVisibleMenu] = useState(false);
 
-	useEffect(() => {
-		if (darkMode) {
-			document.body.classList.add("dark");
-		} else {
-			document.body.classList.remove("dark");
-		}
-	}, [darkMode]);
+  useEffect(() => {
+    if (darkMode) {
+      document.body.classList.add('dark');
+    } else {
+      document.body.classList.remove('dark');
+    }
+  }, [darkMode]);
 
-	function changeMode() {
-		setDarkMode((prevMode) => !prevMode);
-	}
+  function changeMode() {
+    setDarkMode((prevMode) => !prevMode);
+  }
 
-	function showVisibleMenu() {
-		setIsVisibleMenu((prev) => !prev);
-	}
+  function showVisibleMenu() {
+    setIsVisibleMenu((prev) => !prev);
+  }
 
-	return (
-		<div className={`font-secondary bg-gray-100 text-sm`}>
-			<div className="bg-white">
-				<div className="z-20 max-w-310 mx-auto relative ">
-					<Header
-						changeMode={changeMode}
-						showVisibleMenu={showVisibleMenu}
-					/>
-					<div
-						className={` absolute mx-2 -top-6 right-0 left-0 transition-all duration-700 ${
-							isVisibleMenu
-								? "translate-y-0 opacity-100"
-								: "-translate-y-24 opacity-0"
-						}`}
-					>
-						<div className=" bg-white dark:bg-Primary-dark border dark:border-dark-border border-light-border p-2 rounded-xl ">
-							<NavUl changeMode={changeMode} />
-						</div>
-					</div>
-				</div>
-			</div>
-			<Body />
-		</div>
-	);
+  return (
+    <div className={`font-secondary bg-gray-100 text-sm md:flex`}>
+      <div className="min-w-72 z-50 fixed max-w-72 max-md:hidden max-h-svh min-h-svh h-full overflow-y-scroll overflow-x-hidden">
+        <div className="min-md:absolute">
+          <Dashboard />
+        </div>
+      </div>
+      <div className="*:md:pr-[300px]">
+        <Header changeMode={changeMode} showVisibleMenu={showVisibleMenu} />
+        <Body />
+      </div>
+    </div>
+  );
 }
 
 export default App;
